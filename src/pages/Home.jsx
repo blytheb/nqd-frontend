@@ -1,4 +1,12 @@
+import LogOutButton from "../components/LogOutButton"
+
 export default function Home() {
-    return <h1> Home page </h1>
+    return (
+        <div>
+            <LogOutButton />
+            <h1> Home page </h1>
+        </div>
+    );
+
 }
 
