@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ChildDash from './pages/ChildDash';
 
 import './App.css';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -20,7 +21,14 @@ function App() {
             </ProtectedRoute>
           } 
         />
-
+        <Route
+          path='/dash'
+          element={
+            <ProtectedRoute>
+              <ChildDash />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );
