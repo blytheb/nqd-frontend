@@ -3,7 +3,7 @@ import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
 import Home from './pages/Home';
-import Login from './pages/Login';
+import LoginPage from './pages/LoginPage';
 import Register from './pages/Register';
 import ChildDash from './pages/ChildDash';
 
@@ -19,7 +19,7 @@ function App() {
       <Navigationbar />
 
         <Routes>
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<Register />} />
           <Route 
             path='/' 
