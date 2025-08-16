@@ -13,11 +13,11 @@ export default function LoginForm({ onLogin }) {
     };
 
     return (
-        <Container className="d-flex justify-content-center align-content-center wh-100">
+        <Container className="d-flex justify-content-center align-content-center wh-100 p-4">
             <Row className="w-100">
-                <Card>
+                <Card className="shadow">
                     <Card.Body>
-                        <h3> Log In </h3>
+                        <h3 className="text-center mb-4"> Log In </h3>
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formGroupEmail">
                                 <Form.Label>Email address</Form.Label>
@@ -40,7 +40,7 @@ export default function LoginForm({ onLogin }) {
                                 />
                             </Form.Group>
 
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="primary" type="submit" className="w-100">Submit</Button>
                             </Form>
                     </Card.Body>
                 </Card>

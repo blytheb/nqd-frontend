@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext";
 
 import LoginForm from "../components/LoginForm";
 
-export default function Login() {
+export default function LoginPage() {
     const { currentUser } = useAuth();
 
     const navigate = useNavigate();

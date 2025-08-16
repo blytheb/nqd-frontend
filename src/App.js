@@ -4,7 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
-import Register from './pages/Register';
+import RegisterPage from './pages/RegisterPage';
 import ChildDash from './pages/ChildDash';
 
 import Navigationbar from './components/Navigationbar';
@@ -20,7 +20,7 @@ function App() {
 
         <Routes>
           <Route path='/login' element={<LoginPage />} />
-          <Route path='/register' element={<Register />} />
+          <Route path='/register' element={<RegisterPage />} />
           <Route 
             path='/' 
             element={

@@ -32,7 +32,7 @@ export default function Navigationbar(){
                         {currentUser ? (
                             <div>
                             <Navbar.Text>
-                                Signed in as: <a href="#login">{currentUser.email}</a>
+                                Signed in as: <a href="/login">{currentUser.email}</a>
                             </Navbar.Text>
                             <Nav.Link onClick={handleLogOut}>Log Out</Nav.Link>
 
