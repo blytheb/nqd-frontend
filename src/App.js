@@ -7,15 +7,16 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ChildDash from './pages/ChildDash';
 
-import Navbar from './components/Navbar';
+import Navigationbar from './components/Navigationbar';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
       <Router>
       <AuthProvider>
-      <Navbar />
+      <Navigationbar />
 
         <Routes>
           <Route path='/login' element={<Login />} />
