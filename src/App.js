@@ -7,17 +7,21 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ChildDash from './pages/ChildDash';
 
+import Navbar from './components/Navbar';
+
 import './App.css';
 
 function App() {
   return (
-    <Router>
+      <Router>
       <AuthProvider>
+      <Navbar />
+
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route 
-            path='/home' 
+            path='/' 
             element={
               <ProtectedRoute>
                 <Home />

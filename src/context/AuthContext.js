@@ -23,7 +23,7 @@ import { createContext,
     const logout = () => signOut(auth);
 
     return (
-        <AuthContext.Provider value={{ currentUser, logout}} >
+        <AuthContext.Provider value={{ currentUser, logout, loading}} >
             {!loading && children}
         </AuthContext.Provider>
     );

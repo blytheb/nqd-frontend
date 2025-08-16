@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
+// import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
-    const [user, loading] = useAuthState(auth);
+    const { currentUser } = useAuth();
 
     const navigate = useNavigate();
 
@@ -14,10 +15,10 @@ export default function Login() {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        if (user) {
+        if (currentUser) {
             navigate ('/home');
         }
-    }, [user, navigate]);
+    }, [currentUser, navigate]);
 
 
     const handleLogin = async (e) => {
@@ -26,7 +27,7 @@ export default function Login() {
 
         try{
             await signInWithEmailAndPassword(auth, email, password);
-            navigate('/home');
+            navigate('/');
         } catch (err) {
             setError(err.message);
         }
